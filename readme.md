@@ -1,5 +1,5 @@
 # spritesheet-generator
-[![badge-status]][badge-status]
+[![Build Status](https://travis-ci.org/rafaeldelboni/spritesheet-generator.svg?branch=master)](https://travis-ci.org/rafaeldelboni/spritesheet-generator)
 
 A spritesheet generator library using the piston's `texture_packer`,
 this lib provides the packed image and a json with all information following
@@ -16,5 +16,3 @@ cargo run --example generate-test
 - [Piston/Texture Packer](https://github.com/PistonDevelopers/texture_packer)
 - [Texture Packer](https://www.codeandweb.com/texturepacker)
 - [Example Assets](https://opengameart.org/content/5-more-rpgfantasy-weapons)
-
-[badge-status]: https://img.shields.io/badge/status-done-green.svg
