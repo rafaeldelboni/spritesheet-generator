@@ -2,6 +2,12 @@
 name = "spritesheet-generator"
 version = "0.1.0"
 authors = ["Rafael Delboni <rafadelboni@gmail.com>"]
+description = "A spritesheet generator library using the piston's texture_packer"
+keywords = ["texture", "packer", "spritesheet", "atlas"]
+license = "MIT"
+readme = "readme.md"
+repository = "https://github.com/rafaeldelboni/spritesheet-generator.git"
+homepage = "https://github.com/rafaeldelboni/spritesheet-generator"
 
 [dependencies]
 serde = "1.0.68"
