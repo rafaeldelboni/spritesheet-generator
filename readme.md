@@ -1,5 +1,6 @@
 # spritesheet-generator
-[![badge-status]][badge-status]  
+[![badge-status]][badge-status]
+
 A spritesheet generator library using the piston's `texture_packer`,
 this lib provides the packed image and a json with all information following
 the codeandweb's `Texture Packer` basic format.

@@ -3,4 +3,4 @@ language: rust
 cache:
   directories:
     - ~/.cargo
-- target
+    - target
