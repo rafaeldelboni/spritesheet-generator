@@ -13,8 +13,8 @@ extern crate texture_packer;
 
 mod file_data;
 mod file_texture;
-mod spritesheet;
 
+pub mod spritesheet;
 pub mod spritesheet_generator;
 pub mod spritesheet_generator_config;
 
