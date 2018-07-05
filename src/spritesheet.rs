@@ -19,21 +19,6 @@ pub struct Frame {
     pub screen: Screen,
 }
 
-impl Frame {
-    pub fn on_screen(
-        self,
-        image_width: u32,
-        image_height: u32,
-    ) -> Screen {
-        Screen {
-            x: 1. / (image_width as f32 / self.x as f32),
-            y: 1. / (image_height as f32 / self.y as f32),
-            w: 1. / (image_width as f32 / self.w as f32),
-            h: 1. / (image_height as f32 / self.h as f32),
-        }
-    }
-}
-
 #[derive(Serialize, Deserialize, Debug)]
 pub struct Spritesheet {
     frames: HashMap<String, Frame>,

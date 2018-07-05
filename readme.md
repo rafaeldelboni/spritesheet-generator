@@ -5,6 +5,26 @@ A spritesheet generator library using the piston's `texture_packer`,
 this lib provides the packed image and a json with all information following
 the codeandweb's `Texture Packer` basic format.
 
+## Code Sample
+To export the spritesheet:
+```rust
+extern crate spritesheet_generator;
+use spritesheet_generator::spritesheet_generator::generate;
+use spritesheet_generator::spritesheet_generator_config::SpritesheetGeneratorConfig;
+
+fn main() {
+    let config = SpritesheetGeneratorConfig {
+        max_width: 500,
+        max_height: 500,
+        border_padding: 4,
+        input_folder: "examples/assets/".to_string(),
+        output_folder: "examples/resources/".to_string(),
+        output_file_name: "example".to_string(),
+    };
+    generate(config);
+}
+```
+
 ## Example
 To test the sample code, run the code below from the project directory.
 ```bash
