@@ -21,7 +21,7 @@ pub struct Frame {
 
 #[derive(Serialize, Deserialize, Debug)]
 pub struct Spritesheet {
-    frames: HashMap<String, Frame>,
+    pub frames: HashMap<String, Frame>,
 }
 
 pub fn to_atlas(
