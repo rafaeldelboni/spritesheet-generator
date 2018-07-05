@@ -11,6 +11,9 @@ fn main() {
 
     // Read the JSON contents of the file as an instance of `Spritesheet`.
     let sprites: Spritesheet = serde_json::from_reader(file).unwrap();
-
     println!("Json parsed {:?}", sprites);
+
+    // Read one specific frame.
+    let frame = sprites.frames.get("battlehammer").unwrap().screen.clone();
+    println!("Frame parsed {:?}", frame);
 }

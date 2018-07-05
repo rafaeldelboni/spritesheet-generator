@@ -2,7 +2,7 @@ use std::collections::HashMap;
 
 use texture_packer;
 
-#[derive(Serialize, Deserialize, Debug)]
+#[derive(Serialize, Deserialize, Clone, Debug)]
 pub struct Screen {
     pub x: f32,
     pub y: f32,
@@ -10,7 +10,7 @@ pub struct Screen {
     pub h: f32,
 }
 
-#[derive(Serialize, Deserialize, Debug)]
+#[derive(Serialize, Deserialize, Clone, Debug)]
 pub struct Frame {
     pub x: u32,
     pub y: u32,
@@ -19,7 +19,7 @@ pub struct Frame {
     pub screen: Screen,
 }
 
-#[derive(Serialize, Deserialize, Debug)]
+#[derive(Serialize, Deserialize, Clone, Debug)]
 pub struct Spritesheet {
     pub frames: HashMap<String, Frame>,
 }
