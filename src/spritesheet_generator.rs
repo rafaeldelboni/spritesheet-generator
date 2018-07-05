@@ -2,8 +2,10 @@ use std::fs::File;
 
 use serde_json;
 use image;
+use texture_packer::texture::Texture;
 use texture_packer::{TexturePacker, TexturePackerConfig};
 use texture_packer::exporter::ImageExporter;
+
 
 use file_texture;
 use spritesheet;
@@ -30,7 +32,11 @@ pub fn generate(config: spritesheet_generator_config::SpritesheetGeneratorConfig
     }
 
     // Save Json
-    let atlas = spritesheet::to_atlas(packer.get_frames());
+    let atlas = spritesheet::to_atlas(
+        packer.get_frames(),
+        packer.width(),
+        packer.height(),
+    );
     let json_path = format!("{}{}.json", output_folder, output_file_name);
     let json_file = File::create(json_path).unwrap();
     serde_json::to_writer_pretty(json_file, &atlas).unwrap();
