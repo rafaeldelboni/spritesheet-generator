@@ -1,4 +1,5 @@
-use std::collections::HashMap;
+use std::collections::{BTreeMap, HashMap};
+use serde::{Serialize, Serializer};
 
 use texture_packer;
 
@@ -21,7 +22,16 @@ pub struct Frame {
 
 #[derive(Serialize, Deserialize, Clone, Debug)]
 pub struct Spritesheet {
+    #[serde(serialize_with = "ordered_map")]
     pub frames: HashMap<String, Frame>,
+}
+
+fn ordered_map<S>(value: &HashMap<String, Frame>, serializer: S) -> Result<S::Ok, S::Error>
+where
+S: Serializer,
+{
+    let ordered: BTreeMap<_, _> = value.iter().collect();
+    ordered.serialize(serializer)
 }
 
 pub fn to_atlas(

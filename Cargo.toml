@@ -1,6 +1,6 @@
 [package]
 name = "spritesheet-generator"
-version = "0.3.4"
+version = "0.4.0"
 authors = ["Rafael Delboni <rafadelboni@gmail.com>"]
 description = "A spritesheet generator library using the piston's texture_packer"
 keywords = ["texture", "packer", "spritesheet", "atlas"]

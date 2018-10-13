@@ -1,9 +1,16 @@
 # spritesheet-generator
-[![Build Status](https://travis-ci.org/rafaeldelboni/spritesheet-generator.svg?branch=master)](https://travis-ci.org/rafaeldelboni/spritesheet-generator)
+[![Build Status](https://travis-ci.org/rafaeldelboni/spritesheet-generator.svg?branch=master)](https://travis-ci.org/rafaeldelboni/spritesheet-generator) [![Crate Version](http://meritbadge.herokuapp.com/spritesheet-generator)](https://crates.io/crates/spritesheet-generator)
 
 A spritesheet generator library using the piston's `texture_packer`,
 this lib provides the packed image and a json with all information following
 the codeandweb's `Texture Packer` basic format.
+
+## Usage
+Add the crate named `spritesheet-generator` to your dependencies in `Cargo.toml`:
+```ignore
+[dependencies]
+spritesheet-generator = "0.4"
+```
 
 ## Code Sample
 To export the spritesheet:
