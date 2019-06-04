@@ -11,6 +11,7 @@ fn main() {
         input_folder: "examples/assets/".to_string(),
         output_folder: "examples/resources/".to_string(),
         output_file_name: "example".to_string(),
+        allow_rotation: false
     };
     println!("Generating spritesheets: {:?}", config);
 

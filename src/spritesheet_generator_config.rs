@@ -8,6 +8,7 @@ pub struct SpritesheetGeneratorConfig {
     pub input_folder: String,
     pub output_folder: String,
     pub output_file_name: String,
+    pub allow_rotation: bool
 }
 
 impl Default for SpritesheetGeneratorConfig {
@@ -19,6 +20,7 @@ impl Default for SpritesheetGeneratorConfig {
             input_folder: "assets/".to_string(),
             output_folder: "resources/".to_string(),
             output_file_name: "spritesheet".to_string(),
+            allow_rotation: false
         }
     }
 }

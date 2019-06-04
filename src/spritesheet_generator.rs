@@ -22,7 +22,7 @@ pub fn generate(config: spritesheet_generator_config::SpritesheetGeneratorConfig
         max_width: config.max_width,
         max_height: config.max_height,
         border_padding: config.border_padding,
-        allow_rotation: false,
+        allow_rotation: config.allow_rotation,
         texture_outlines: false,
         ..Default::default()
     };
