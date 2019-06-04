@@ -9,7 +9,7 @@ the codeandweb's `Texture Packer` basic format.
 Add the crate named `spritesheet-generator` to your dependencies in `Cargo.toml`:
 ```ignore
 [dependencies]
-spritesheet-generator = "0.4"
+spritesheet-generator = "0.5"
 ```
 
 ## Code Sample
@@ -27,6 +27,7 @@ fn main() {
         input_folder: "examples/assets/".to_string(),
         output_folder: "examples/resources/".to_string(),
         output_file_name: "example".to_string(),
+        allow_rotation: false,
     };
     generate(config);
 }
